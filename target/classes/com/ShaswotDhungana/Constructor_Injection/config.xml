@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:context="http://www.springframework.org/schema/context"
+xmlns:c="http://www.springframework.org/schema/c"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+https://www.springframework.org/schema/beans/spring-beans.xsd
+http://www.springframework.org/schema/context
+http://www.springframework.org/schema/context/spring-context.xsd">
+
+
+
+<!-- Constructor Injection -->
+<!-- we can pass value as a Element and Value as a Attribute but cannot pass Value as P-Schema in Constructor Injection  -->
+<!-- and we can also use C-Schema {Constructor Schema}  -->
+<!-- In setterInjection we use "Property" tag and in ConstructorInjection we use "constructor-arg" Tag. -->
+
+
+
+<!--
+ <bean name="certificateBean" class="com.ShaswotDhungana.Constructor_Injection.Certificate">
+<constructor-arg value="Android Developer" /> 
+</bean> 
+-->
+
+<!-- OR  -->
+<!-- Using C-Schema  -->
+
+<bean name="certificateBean" class="com.ShaswotDhungana.Constructor_Injection.Certificate" c:certiName="Android Developer" />
+
+
+
+
+<bean name="personBean" class="com.ShaswotDhungana.Constructor_Injection.Person">
+
+<constructor-arg value="Shaswot Dhungana" type="String" />
+<constructor-arg value="10" type="int" />
+<constructor-arg ref="certificateBean" />
+
+
+
+</bean>
+
+
+
+</beans>

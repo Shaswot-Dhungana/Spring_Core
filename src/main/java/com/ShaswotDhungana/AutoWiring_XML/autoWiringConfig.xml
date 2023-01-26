@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:context="http://www.springframework.org/schema/context"
+xmlns:p="http://www.springframework.org/schema/p"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+https://www.springframework.org/schema/beans/spring-beans.xsd
+http://www.springframework.org/schema/context
+http://www.springframework.org/schema/context/spring-context.xsd">
+
+
+
+<bean name="address" class="com.ShaswotDhungana.AutoWiring_XML.Address">
+<property name="street">
+<value>Talchowk</value>
+</property>
+
+<property name="city">
+<value>Pokhara</value>
+</property>
+
+</bean>
+
+<!-- AutoWiring using byName , address bean and address reference is linked.
+ name should be same i.e address  -->
+ <!--
+<bean name="emp" class="com.ShaswotDhungana.AutoWiring_XML.Emp" autowire="byName" />
+-->
+
+
+
+<!-- AutoWiring byType i.e type of reference(address) is Address and
+link that with Address class Bean.
+ -->
+ <!--  
+<bean name="emp" class="com.ShaswotDhungana.AutoWiring_XML.Emp" autowire="byType" />
+-->
+
+
+<!-- AutoWiring by using Constructor . -->
+<bean name="emp" class="com.ShaswotDhungana.AutoWiring_XML.Emp" autowire="constructor" />
+
+
+</beans>

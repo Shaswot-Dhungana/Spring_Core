@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:context="http://www.springframework.org/schema/context"
+xmlns:p="http://www.springframework.org/schema/p"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+https://www.springframework.org/schema/beans/spring-beans.xsd
+http://www.springframework.org/schema/context
+http://www.springframework.org/schema/context/spring-context.xsd">
+
+
+
+<!-- Setter Injection -->
+<!-- Injecting data using Property as a Tag , and Value as a element.  -->
+<bean class="com.ShaswotDhungana.SetterInjection.Student" name="Student1">
+
+<property name="studentId">
+<value>1</value>
+</property>
+
+<property name="studentName">
+<value>Shaswot Dhungana</value>
+</property>
+
+<property name="studentAddress">
+<value>South Asia</value>
+</property>
+</bean>
+
+
+
+<!-- Setter Injection -->
+<!-- Injecting data using Property as a Tag , and Value as a Attribute. -->
+
+<bean class="com.ShaswotDhungana.SetterInjection.Student" name="Student2">
+
+<property name="studentId" value="2" />
+
+<property name="studentName" value="Yash" />
+
+<property name="studentAddress" value="K.G.F" />
+</bean>
+
+
+
+<!-- Setter Injection -->
+<!-- Injecting data using P-Schema {Property Schema} -->
+
+<bean class="com.ShaswotDhungana.SetterInjection.Student" name="Student3" p:studentId="3" p:studentName="RoleX" p:studentAddress="Under-World" />
+
+
+
+<!-- Setter Injection -->
+<!-- Injecting List Data -->
+<!-- Duplicate data is Allowed in List.. -->
+<!--
+<bean class="com.ShaswotDhungana.SpringCore.Student" name="Student4">
+
+<property name="studentId">
+<value>4</value>
+</property>
+
+<property name="studentName">
+<value>Rajesh Hamal</value>
+</property>
+
+<property name="studentAddress">
+
+<list>
+<value>Pokhara</value>
+<value>Kathmandu</value>
+<value>Nepalgunj</value>
+<value>Pokhara</value>
+<value>Kathmandu</value>
+</list>
+
+</property>
+
+</bean>
+-->
+
+
+<!-- Setter Injection -->
+<!-- Injecting SET Data -->
+<!-- Duplicate data is Not Allowed in Set.. -->
+<!-- 
+<bean class="com.ShaswotDhungana.SpringCore.Student" name="Student5">
+
+<property name="studentId">
+<value>5</value>
+</property>
+
+<property name="studentName">
+<value>Hamal Rajesh</value>
+</property>
+
+<property name="studentAddress">
+
+<set>
+<value>Pokhara</value>
+<value>Kathmandu</value>
+<value>Nepalgunj</value>
+</set>
+
+</property>
+
+</bean>
+ -->
+
+
+
+
+<!-- Setter Injection -->
+<!-- Injecting MAP Data -->
+
+<!-- 
+<bean class="com.ShaswotDhungana.SpringCore.Student" name="Student6">
+
+<property name="studentId">
+<value>6</value>
+</property>
+
+<property name="studentName">
+<value>Rajesh Hamal</value>
+</property>
+
+<property name="studentAddress">
+
+<map>
+<entry key="Address-1" value="Pokhara" />
+<entry key="Address-2" value="Kathmandu" />
+</map>
+
+</property>
+
+</bean>
+ -->
+
+
+
+
+
+<!-- Setter Injection -->
+<!-- Injecting Props Data -->
+
+<!--
+<bean class="com.ShaswotDhungana.SpringCore.Student" name="Student7">
+
+<props>
+<prop key="studentId">7</prop>
+<prop key="studentName">Shaswot</prop>
+<prop key="studentAddress">Kathmandu</prop>
+</props>
+
+</bean>
+-->
+
+
+
+
+
+
+
+
+</beans>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:context="http://www.springframework.org/schema/context"
+xmlns:p="http://www.springframework.org/schema/p"
+xmlns:util="http://www.springframework.org/schema/util"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+https://www.springframework.org/schema/beans/spring-beans.xsd
+http://www.springframework.org/schema/context
+http://www.springframework.org/schema/context/spring-context.xsd
+http://www.springframework.org/schema/util
+http://www.springframework.org/schema/util/spring-util.xsd
+">
+
+<!-- Util Schema -->
+
+
+<!-- StandAlone List -->
+<util:list list-class="java.util.LinkedList" id="studentsNameLinkedList">
+<value>Naruto Uzumaki</value>
+<value>Sasuke Uchiha</value>
+<value>Sakura Haruno</value>
+</util:list>
+
+
+
+<!-- StandAlone Map -->
+<util:map map-class="java.util.HashMap" id="studentsSchoolHashMap">
+<entry key="Leaf Academy" value="The Hidden Leaf Village" />
+</util:map>
+
+
+<!-- StandAlone Properties  -->
+<util:properties id="bestTeachersProps">
+<prop key=" 1 "> Master Jiraya </prop>
+<prop key=" 2 "> Kakashi Hatake </prop>
+<prop key=" 3 "> Asuma Seratobi </prop>
+</util:properties>
+
+
+
+<bean name="myBean" class="com.ShaswotDhungana.StandAlone_Collections.MyClass">
+
+<property name="studentNames">
+<ref bean="studentsNameLinkedList" />
+</property>
+
+<property name="symbolNo">
+<set>
+<value>#0020</value>
+<value>#0021</value>
+<value>#0022</value>
+</set>
+</property>
+
+
+<property name="schoolsAddress" ref="studentsSchoolHashMap" />
+
+
+<property name="bestTeachers" ref="bestTeachersProps" />
+
+
+
+</bean>
+
+
+
+
+
+</beans>

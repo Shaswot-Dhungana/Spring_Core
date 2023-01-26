@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:context="http://www.springframework.org/schema/context"
+xmlns:c="http://www.springframework.org/schema/c"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+https://www.springframework.org/schema/beans/spring-beans.xsd
+http://www.springframework.org/schema/context
+http://www.springframework.org/schema/context/spring-context.xsd">
+
+
+
+
+
+<!--	 index Attribute means the parameters of a constructor
+	indexing starts from 0 ,
+	first parameter of constructor = 0 and so on..
+
+ -->
+
+
+
+<bean name="myBean" class="com.ShaswotDhungana.Constructor_Injection_Ambiguity_Problem_Solved.MyClass" >
+
+<constructor-arg type="int" index="1">
+<value>5</value>
+</constructor-arg>
+
+<constructor-arg type="int" index="0">
+<value>10</value>
+</constructor-arg> 
+
+
+
+<!-- <constructor-arg type="double" index="0">
+<value>5</value>
+</constructor-arg>
+
+<constructor-arg type="double" index="1">
+<value>10</value>
+</constructor-arg> -->
+
+
+</bean>
+
+
+</beans>
